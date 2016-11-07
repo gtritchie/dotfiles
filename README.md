@@ -1,9 +1,11 @@
-*Links*
+Links
+-----
 
 ln -s ~/dotfiles/vim ~/.vim
 
-*VIM plugins*
+VIM plugins
+-----------
 
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
+* git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+* vim +PluginInstall +qall
 
