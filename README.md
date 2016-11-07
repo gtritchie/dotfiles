@@ -1,7 +1,8 @@
 Links
 -----
 
-ln -s ~/dotfiles/vim ~/.vim
+* ln -s ~/dotfiles/vim ~/.vim
+* ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
 
 VIM plugins
 -----------
