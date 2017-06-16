@@ -35,7 +35,7 @@ au FileType cpp setlocal shiftwidth=3 tabstop=3
 au FileType java setlocal shiftwidth=3 tabstop=3
 au FileType r setlocal shiftwidth=2 tabstop=2 et
 au FileType ruby setlocal shiftwidth=2 tabstop=2 et
-set colorcolumn=80
+set colorcolumn=100
 
 " don't clutter with Vim backup files
 set backupdir=~/.vimbackup
