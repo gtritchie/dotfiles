@@ -13,6 +13,11 @@ Mac-only
 
 * ln ~/dotfiles/bash/bash_profile_mac ~/.bash_profile
 
+Linux-only
+----------
+
+* ln ~/dotfiles/bash/bashrc_linux ~/.bashrc
+
 VIM plugins
 -----------
 
