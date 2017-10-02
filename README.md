@@ -8,6 +8,11 @@ Setup commands
 * git config --global user.email "gary@rstudio.com"
 * git config --global user.name "Gary Ritchie"
 
+Mac-only
+----------
+
+* ln ~/dotfiles/bash/bash_profile_mac ~/.bash_profile
+
 VIM plugins
 -----------
 
