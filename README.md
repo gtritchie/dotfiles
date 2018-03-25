@@ -14,12 +14,16 @@ Mac-only
 * ln ~/dotfiles/bash/bash_profile_mac ~/.bash_profile
 * brew install hg
 * hg clone https://bitbucket.org/lukeworth/lldb-qt-formatters
-* ln -s ~/dotfiles/lldb/.lldbinit .lldbinit
+* ln ~/dotfiles/lldb/.lldbinit .lldbinit
 
 Linux-only
 ----------
 
 * ln ~/dotfiles/bash/bashrc_linux ~/.bashrc
+* mkdir ~/.gdb
+* cd ~/.gdb
+* git clone https://github.com/Lekensteyn/qt5printers
+* ln ~/dotfiles/gdb/gdbinit ~/.gdbinit
 
 VIM plugins
 -----------
