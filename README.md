@@ -3,6 +3,7 @@ Setup commands
 
 * ln -s ~/dotfiles/vim ~/.vim
 * ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
+* ln -s ~/dotfiles/bin ~/bin
 * mkdir ~/.vimbackup
 * mkdir ~/.vimswap
 * git config --global user.email "gary@rstudio.com"
