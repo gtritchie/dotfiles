@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# copy compiled stuff into RSP installation
+
+SESSION_SOURCE=~/rstudio-pro/src/cpp/cmake-build-debug/session
+SESSION_DEST=/usr/lib/rstudio-server
+
+sudo cp $SESSION_SOURCE/rsession $SESSION_DEST/bin/rsession
+sudo cp $SESSION_SOURCE/modules/R/JobLauncher.R $SESSION_DEST/R/modules
+
+echo Copied latest rsession and JobLauncher.R
+

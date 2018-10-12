@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+sudo rm -rf /usr/lib/rstudio-server/www
+sudo cp -R ~/rstudio-pro/src/gwt/www /usr/lib/rstudio-server
+

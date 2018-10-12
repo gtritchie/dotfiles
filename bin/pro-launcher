@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+sudo /usr/lib/rstudio-server/bin/rstudio-launcher
+

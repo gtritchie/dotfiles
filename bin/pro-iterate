@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -e
+
+PREV_WD=$(pwd)
+
+CMAKE_BUILD_TYPE=Debug cd ~/rstudio-pro/package/linux
+~/rstudio-pro/vagrant/iterate-pro.sh
+
+cd $PREV_WD
