@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+set -e
+
+PREV_WD=$(pwd)
+
+cd ~/rstudio-pro/src/cpp/session/workspaces/www-workspaces
+git clean -fd .
+git checkout -- .
+
+
+cd ~/rstudio-pro/src/cpp/session/workspaces/www-sources
+./compile-ui.sh
+
+cd $PREV_WD

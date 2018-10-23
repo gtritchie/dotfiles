@@ -5,7 +5,7 @@ set -e
 PREV_WD=$(pwd)
 
 cd ~/rstudio-pro/package/linux
-# CMAKE_BUILD_TYPE=Debug ~/rstudio-pro/vagrant/iterate-pro.sh
-~/rstudio-pro/vagrant/iterate-pro.sh
+CMAKE_BUILD_TYPE=Debug ~/rstudio-pro/vagrant/iterate-pro.sh
+#~/rstudio-pro/vagrant/iterate-pro.sh
 
 cd $PREV_WD
