@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+RELEASE_PROXY=/home/gary/rstudio-pro/package/linux/build-Server-DEB/src/cpp/job_launcher/utils/launcher-proxy
+DEBUG_PROXY=/home/gary/rstudio-pro/package/linux/build-Server-DEB-Debug/src/cpp/job_launcher/utils/launcher-proxy
+if [ -e $RELEASE_PROXY ]
+then
+    $RELEASE_PROXY
+else
+    $DEBUG_PROXY
+fi
+

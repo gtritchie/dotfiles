@@ -3,6 +3,7 @@ Setup commands
 
 * ln -s ~/dotfiles/vim ~/.vim
 * ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
+* ln -s ~/dotfiles/bin ~/bin
 * mkdir ~/.vimbackup
 * mkdir ~/.vimswap
 * git config --global user.email "gary@rstudio.com"
@@ -20,10 +21,11 @@ Linux-only
 ----------
 
 * ln ~/dotfiles/bash/bashrc_linux ~/.bashrc
-* git clone git@github.com:Lekensteyn/qt5printers.git
 * mkdir ~/.gdb
-* mv ~/qt5printers ~/.gdb
+* cd ~/.gdb
+* git clone git@github.com:Lekensteyn/qt5printers.git
 * ln ~/dotfiles/gdb/.gdbinit ~/.gdbinit
+* also grab gary-buildtools from rstudio 
 
 VIM plugins
 -----------

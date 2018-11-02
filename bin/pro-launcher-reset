@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+sudo rm -rf /var/lib/rstudio-launcher/Local
+sudo rm -rf /var/lib/rstudio-launcher/Kubernetes
+
+

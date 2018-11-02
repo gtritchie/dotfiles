@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -e
+
+PREV_WD=$(pwd)
+
+cd ~/rstudio-pro/package/linux
+MAKEFLAGS=-j4 CMAKE_BUILD_TYPE=Debug ~/rstudio-pro/vagrant/iterate-pro.sh
+#~/rstudio-pro/vagrant/iterate-pro.sh
+
+cd $PREV_WD
