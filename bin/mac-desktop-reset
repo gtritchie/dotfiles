@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+defaults delete com.rstudio.desktop
+defaults delete com.rstudio.desktopPro
+defaults delete org.rstudio.RStudio
+rm -rf ~/rstudio-desktop
