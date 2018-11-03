@@ -23,8 +23,8 @@ Linux-only
 * ln ~/dotfiles/bash/bashrc_linux ~/.bashrc
 * mkdir ~/.gdb
 * cd ~/.gdb
-* git clone https://github.com/Lekensteyn/qt5printers
-* ln ~/dotfiles/gdb/gdbinit ~/.gdbinit
+* git clone git@github.com:Lekensteyn/qt5printers.git
+* ln ~/dotfiles/gdb/.gdbinit ~/.gdbinit
 * also grab gary-buildtools from rstudio 
 
 VIM plugins
