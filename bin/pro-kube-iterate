@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -e
+
+PREV_WD=$(pwd)
+cd ~/rstudio-pro/src/cpp/job_launcher/impls/kubernetes/docker
+git stash apply stash@{0}
+
+./build-local-session-image.sh
+
+sudo rm ~/rstudio-pro/docker/package/*.rpm
+rm ~/rstudio-pro/src/cpp/job_launcher/impls/kubernetes/docker/build/*.rpm
+git checkout -- .
+cd $PREV_WD
