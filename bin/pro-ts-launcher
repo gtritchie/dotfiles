@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -e
+
+PREV_WD=$(pwd)
+
+cd ~/rstudio-pro/src/cpp/server/launcher/www-sources
+./compile-ui.sh
+cd ../www-launcher/js
+sudo cp launcher.js   /usr/lib/rstudio-server/www-launcher/js/launcher.js
+sudo cp launcher.d.ts /usr/lib/rstudio-server/www-launcher/js/launcher.d.ts
+cd $PREV_WD
