@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
 sudo rstudio-server stop
+pkill rserver 
+pkill rsession
+pkill rworkspaces
 
 # copy compiled stuff into RSP installation
 
