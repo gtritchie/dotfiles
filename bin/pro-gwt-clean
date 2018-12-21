@@ -2,12 +2,19 @@
 
 set -e
 
-sudo rm -rf /usr/lib/rstudio-server/www
-rm -rf ~/rstudio-pro/src/gwt/www
+# things gitignored but I'm not deleting
+#rm ~/rstudio-pro/src/gwt/www/js/acesupport.js
+#rm ~/rstudio-pro/src/gwt/www/js/ace.js
+#rm ~/rstudio-pro/src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ace/acesupport.js
+#rm ~/rstudio-pro/src/gwt/src/org/rstudio/core/client/jsonrpc/json2.min.js
+#rm ~/rstudio-pro/src/gwt/www/js/json2.min.js
+#rm ~/rstudio-pro/src/gwt/.ant-targets-build.xml
+
 rm -rf ~/rstudio-pro/src/gwt/bin
+rm -rf ~/rstudio-pro/src/gwt/bin.test
+rm -rf ~/rstudio-pro/src/gwt/gwt-unitCache
 rm -rf ~/rstudio-pro/src/gwt/extras
 rm -rf ~/rstudio-pro/src/gwt/gen
 rm -rf ~/rstudio-pro/src/gwt/sdk
 rm -rf ~/rstudio-pro/src/gwt/war
-
-
+rm -rf ~/rstudio-pro/src/gwt/www/rstudio
