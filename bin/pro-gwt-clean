@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -e
+
+sudo rm -rf /usr/lib/rstudio-server/www
+rm -rf ~/rstudio-pro/src/gwt/www
+rm -rf ~/rstudio-pro/src/gwt/bin
+rm -rf ~/rstudio-pro/src/gwt/extras
+rm -rf ~/rstudio-pro/src/gwt/gen
+rm -rf ~/rstudio-pro/src/gwt/sdk
+rm -rf ~/rstudio-pro/src/gwt/war
+
+
