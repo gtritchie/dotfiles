@@ -22,11 +22,5 @@ sudo cp -v $COPY_SOURCE/session/modules/R/SessionJobs.R $COPY_DEST/R/modules
 #sudo cp -v $COPY_SOURCE/job_launcher/impls/local/rstudio-local-launcher $COPY_DEST/bin/rstudio-local-launcher
 #sudo cp -v $COPY_SOURCE/job_launcher/impls/kubernetes/rstudio-kubernetes-launcher $COPY_DEST/bin/rstudio-kubernetes-launcher
 
-# workspaces webpage
-COPY_SOURCE=~/rstudio-pro/src/cpp/session/workspaces
-
-#sudo rm -rf $COPY_DEST/www-workspaces
-#sudo cp -vR $COPY_SOURCE/www-workspaces $COPY_DEST
-
 echo Done
 

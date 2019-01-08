@@ -7,4 +7,9 @@ PREV_WD=$(pwd)
 cd ~/rstudio-pro/src/cpp/session/workspaces/www-sources
 ./compile-ui.sh
 
+COPY_SOURCE=~/rstudio-pro/src/cpp/session/workspaces
+COPY_DEST=/usr/lib/rstudio-server
+sudo rm -rf $COPY_DEST/www-workspaces
+sudo cp -R $COPY_SOURCE/www-workspaces $COPY_DEST
+
 cd $PREV_WD
