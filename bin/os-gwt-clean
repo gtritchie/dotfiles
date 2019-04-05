@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+set -e
+
+# things gitignored but I'm not deleting
+#rm ~/rstudio/src/gwt/www/js/acesupport.js
+#rm ~/rstudio/src/gwt/www/js/ace.js
+#rm ~/rstudio/src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ace/acesupport.js
+#rm ~/rstudio/src/gwt/src/org/rstudio/core/client/jsonrpc/json2.min.js
+#rm ~/rstudio/src/gwt/www/js/json2.min.js
+#rm ~/rstudio/src/gwt/.ant-targets-build.xml
+
+rm -rf ~/rstudio/src/gwt/bin
+rm -rf ~/rstudio/src/gwt/bin.test
+rm -rf ~/rstudio/src/gwt/gwt-unitCache
+rm -rf ~/rstudio/src/gwt/extras
+rm -rf ~/rstudio/src/gwt/gen
+rm -rf ~/rstudio/src/gwt/sdk
+rm -rf ~/rstudio/src/gwt/war
+rm -rf ~/rstudio/src/gwt/www/rstudio
