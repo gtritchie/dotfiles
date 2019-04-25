@@ -83,3 +83,6 @@ inoremap jk <ESC>
 set encoding=utf-8
 let g:netrw_browse_split = 3
 " autocmd BufEnter * silent! lcd %:p:h
+
+imap jj <Esc>
+
