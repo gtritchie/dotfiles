@@ -7,8 +7,6 @@ Setup commands
 * ln -s ~/dotfiles/vim/ideavimrc ~/.ideavimrc
 * mkdir ~/.vimbackup
 * mkdir ~/.vimswap
-* git config --global user.email "gary@rstudio.com"
-* git config --global user.name "Gary Ritchie"
 
 Mac-only
 ----------
