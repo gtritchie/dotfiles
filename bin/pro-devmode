@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
 cd ~/rstudio-pro/src/gwt
-ant devmode
+ant devmode -Dbind.address=0.0.0.0
+
 
