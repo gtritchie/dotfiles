@@ -28,6 +28,7 @@ Linux-only
 ----------
 
 * ln ~/dotfiles/bash/bash_aliases ~/.bash_aliases
+* chsh -s $(which zsh)
 * mkdir ~/.gdb
 * cd ~/.gdb
 * git clone git@github.com:Lekensteyn/qt5printers.git
