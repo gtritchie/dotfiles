@@ -1,14 +1,19 @@
 Setup commands
 --------------
 
-* ln -s ~/dotfiles/vim ~/.vim
-* ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
-* ln -s ~/dotfiles/bin ~/bin
-* ln -s ~/dotfiles/vim/ideavimrc ~/.ideavimrc
-* ln -s ~/dotfiles/git/gitignore_global ~/.gitignore_global
-* git config --global core.excludesfile ~/.gitignore_global
-* mkdir ~/.vimbackup
-* mkdir ~/.vimswap
+```
+ln -s ~/dotfiles/vim ~/.vim
+ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/bin ~/bin
+ln -s ~/dotfiles/vim/ideavimrc ~/.ideavimrc
+ln -s ~/dotfiles/git/gitignore_global ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+git config --global user.name "Gary Ritchie"
+git config --global user.email "gary@rstudio.com" 
+git config --global core.editor "vim"
+mkdir ~/.vimbackup
+mkdir ~/.vimswap
+```
 
 Mac-only
 ----------
