@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -e
+echo https://docs.rstudio.com/ide/server-pro/latest/tutorial-api.html
+echo http://localhost:8080/demo.htm
+
+PREV_WD=$(pwd)
+
+cd /usr/lib/rstudio-server/extras/tutorial
+python -m SimpleHTTPServer 8080
+
+cd $PREV_WD
+
