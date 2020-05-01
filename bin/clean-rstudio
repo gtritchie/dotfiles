@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+set -e
+
+echo "About to delete all RStudio settings"
+read -p "Press [enter] to continue or Ctrl+C"
+
+if [[ -f "~/.RData" ]]
+then
+  rm ~/.RData
+fi
+
+if [[ -f "~/.Rhistory" ]]
+then
+  rm ~/.Rhistory
+fi
+
+if [[ -d "~/.config/rstudio" ]]
+then
+  rm -rf ~/.config/rstudio
+fi
+
+if [[ -d "~/.rstudio" ]]
+then
+  rm -rf ~/.rstudio
+fi
+
+if [[ -d "~/.rstudio-desktop" ]]
+then
+  rm -rf ~/.rstudio-desktop
+fi
+
+if [[ -d "~/.local/share/rstudio" ]]
+then
+  rm -rf ~/.local/share/rstudio
+fi
+
+echo Done cleaning RStudio settings
