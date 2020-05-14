@@ -5,33 +5,39 @@ set -e
 echo "About to delete all RStudio settings"
 read -p "Press [enter] to continue or Ctrl+C"
 
-if [[ -f "~/.RData" ]]
+if [[ -f ~/.RData ]]
 then
+  echo deleting ~/.RData
   rm ~/.RData
 fi
 
-if [[ -f "~/.Rhistory" ]]
+if [[ -f ~/.Rhistory ]]
 then
+  echo deleting ~/.Rhistory
   rm ~/.Rhistory
 fi
 
-if [[ -d "~/.config/rstudio" ]]
+if [[ -d ~/.config/rstudio ]]
 then
+  echo deleting ~/.config/rstudio
   rm -rf ~/.config/rstudio
 fi
 
-if [[ -d "~/.rstudio" ]]
+if [[ -d ~/.rstudio ]]
 then
+  echo deleting ~/.rstudio
   rm -rf ~/.rstudio
 fi
 
-if [[ -d "~/.rstudio-desktop" ]]
+if [[ -d ~/.rstudio-desktop ]]
 then
+  echo deleting ~/.rstudio-desktop
   rm -rf ~/.rstudio-desktop
 fi
 
-if [[ -d "~/.local/share/rstudio" ]]
+if [[ -d ~/.local/share/rstudio ]]
 then
+  echo deleting ~/.local/share/rstudio
   rm -rf ~/.local/share/rstudio
 fi
 
