@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+
+set -e
+
+BACKUPDIR=~/rstudio-settings-backup
+if [[ -e ${BACKUPDIR} ]]
+then
+    echo ERROR: existing backup found at ${BACKUPDIR}
+    exit 1
+fi
+
+echo "About to backup all RStudio settings to ${BACKUPDIR}"
+read -p "Press [enter] to continue or Ctrl+C"
+
+mkdir ~/rstudio-settings-backup
+
+if [[ -f "~/.RData" ]]
+then
+  mv ~/.RData ${BACKUPDIR}/RData
+fi
+
+if [[ -f "~/.Rhistory" ]]
+then
+  mv ~/.Rhistory ${BACKUPDIR}/Rhistory
+fi
+
+if [[ -d "~/.config/rstudio" ]]
+then
+  mv ~/.config/rstudio ${BACKUPDIR}/config_rstudio
+fi
+
+if [[ -d "~/.rstudio" ]]
+then
+  mv ~/.rstudio ${BACKUPDIR}/rstudio
+fi
+
+if [[ -d "~/.rstudio-desktop" ]]
+then
+  mv ~/.rstudio-desktop ${BACKUPDIR}/rstudio-desktop
+fi
+
+if [[ -d "~/.local/share/rstudio" ]]
+then
+  mv ~/.local/share/rstudio ${BACKUPDIR}/local_share_rstudio
+fi
+
+echo Done backing up settings 
