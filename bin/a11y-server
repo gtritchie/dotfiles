@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+ssh gary@3.231.58.3
+
