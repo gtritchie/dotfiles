@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -e
+
+PREV_WD=$(pwd)
+
+cd ~/rstudio-pro/src/gwt
+ant desktop -Dbind.address=0.0.0.0
+cd $PREV_WD
+
