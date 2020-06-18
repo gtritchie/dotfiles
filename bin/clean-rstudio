@@ -2,43 +2,48 @@
 
 set -e
 
-echo "About to delete all RStudio settings"
+echo "About to delete all per-user RStudio state and settings, proceed with caution!"
+echo "(Does not delete Project-specific state in .Rproj.user or global machine state)"
 read -p "Press [enter] to continue or Ctrl+C"
 
-if [[ -f ~/.RData ]]
-then
-  echo deleting ~/.RData
+PLATFORM=`uname`
+
+if [[ -f ~/.RData ]]; then
   rm ~/.RData
 fi
 
-if [[ -f ~/.Rhistory ]]
-then
-  echo deleting ~/.Rhistory
+if [[ -f ~/.Rhistory ]]; then
   rm ~/.Rhistory
 fi
 
-if [[ -d ~/.config/rstudio ]]
-then
-  echo deleting ~/.config/rstudio
+# global options
+if [[ -d ~/.config/rstudio ]]; then
   rm -rf ~/.config/rstudio
 fi
 
-if [[ -d ~/.rstudio ]]
-then
-  echo deleting ~/.rstudio
+# settings and session state
+if [[ -d ~/.rstudio ]]; then
   rm -rf ~/.rstudio
 fi
 
-if [[ -d ~/.rstudio-desktop ]]
-then
-  echo deleting ~/.rstudio-desktop
-  rm -rf ~/.rstudio-desktop
-fi
-
-if [[ -d ~/.local/share/rstudio ]]
-then
-  echo deleting ~/.local/share/rstudio
+# open files and tabs
+if [[ -d ~/.local/share/rstudio ]]; then
   rm -rf ~/.local/share/rstudio
 fi
 
-echo Done cleaning RStudio settings
+# desktop state
+if [[ -d ~/.rstudio-desktop ]]; then
+  rm -rf ~/.rstudio-desktop
+fi
+
+if [ "${PLATFORM}" = "Darwin" ]; then
+  # macOS desktop settings
+  defaults delete com.rstudio.desktop &> /dev/null || true
+  defaults delete org.rstudio.RStudio &> /dev/null || true
+elif [[ -d ~/.config/RStudio ]]; then
+  # Linux desktop settings
+  rm -rf ~/.config/RStudio
+fi
+
+echo Done cleaning RStudio settings and state
+
