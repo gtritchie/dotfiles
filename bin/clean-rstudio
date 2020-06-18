@@ -38,8 +38,14 @@ fi
 
 if [ "${PLATFORM}" = "Darwin" ]; then
   # macOS desktop settings
-  defaults delete com.rstudio.desktop &> /dev/null || true
-  defaults delete org.rstudio.RStudio &> /dev/null || true
+  # defaults delete com.rstudio.desktop
+  if [[ -f ~/Library/Preferences/com.rstudio.desktop.plist ]]; then
+    rm ~/Library/Preferences/com.rstudio.desktop.plist
+  fi
+  # defaults delete org.rstudio.RStudio
+  if [[ -f ~/Library/Preferences/org.rstudio.RStudio.plist ]]; then
+    rm ~/Library/Preferences/org.rstudio.RStudio.plist
+  fi
 elif [[ -d ~/.config/RStudio ]]; then
   # Linux desktop settings
   rm -rf ~/.config/RStudio
