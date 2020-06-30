@@ -55,6 +55,7 @@ let mapleader = ","
 set cursorline
 set bs=2
 set showcmd
+set nowrapscan
 syn on
 
 " Window management
