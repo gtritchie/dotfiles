@@ -1,6 +1,6 @@
 @echo off
 echo About to delete all per-user RStudio state and settings, proceed with caution!
-echo (Does not delete Project-specific state in .Rproj.user or global machine state)
+echo (Does not delete Project-specific state in .Rproj.user, global machine state, or .Renviron)
 set /p=Press [enter] to continue or Ctrl+C
 
 if EXIST "%localappdata%\RStudio-Desktop\" (
