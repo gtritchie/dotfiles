@@ -8,43 +8,30 @@ read -p "Press [enter] to continue or Ctrl+C"
 
 PLATFORM=`uname`
 
-if [[ -f ~/.RData ]]; then
-  rm ~/.RData
-fi
-
-if [[ -f ~/.Rhistory ]]; then
-  rm ~/.Rhistory
-fi
+# r state
+rm -f ~/.RData
+rm -f ~/.Rhistory
 
 # global options
-if [[ -d ~/.config/rstudio ]]; then
-  rm -rf ~/.config/rstudio
-fi
+rm -rf ~/.config/rstudio
 
 # settings and session state
-if [[ -d ~/.rstudio ]]; then
-  rm -rf ~/.rstudio
-fi
+rm -rf ~/.rstudio
 
 # open files and tabs
-if [[ -d ~/.local/share/rstudio ]]; then
-  rm -rf ~/.local/share/rstudio
-fi
+rm -rf ~/.local/share/rstudio
 
 # desktop state
-if [[ -d ~/.rstudio-desktop ]]; then
-  rm -rf ~/.rstudio-desktop
-fi
+rm -rf ~/.rstudio-desktop
 
 if [ "${PLATFORM}" = "Darwin" ]; then
   # macOS desktop settings
   defaults delete com.rstudio.desktop > /dev/null 2>&1 || true
   defaults delete com.RStudio.desktop > /dev/null 2>&1 || true
   defaults delete org.rstudio.RStudio > /dev/null 2>&1 || true
-elif [[ -d ~/.config/RStudio ]]; then
+else
   # Linux desktop settings
   rm -rf ~/.config/RStudio
 fi
 
 echo Done cleaning RStudio settings and state
-
