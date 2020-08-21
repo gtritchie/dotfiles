@@ -1,0 +1,25 @@
+set -e
+
+if [ -z "$1" ]; then
+   echo "Error: must specify version on command line (e.g. 1.3.821)"
+   exit 1
+fi
+
+echo Got $1
+
+FOLDER=RStudio-$1
+INSTALLER=$FOLDER.zip
+
+if [ ! -e "$INSTALLER" ]; then
+   wget https://rstudio-ide-build.s3.amazonaws.com/desktop/windows/$INSTALLER
+fi
+
+if [ ! -e "$INSTALLER" ]; then
+   echo "Error: failed to download zip file $INSTALLER"
+   exit 1
+fi
+
+unzip -d /mnt/d/Windows/$FOLDER $INSTALLER
+rm $INSTALLER
+
+echo Done extracting to $FOLDER
