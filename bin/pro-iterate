@@ -6,7 +6,7 @@ PREV_WD=$(pwd)
 
 cd ~/rstudio-pro/package/linux
 
-MAKEFLAGS=-j4 CMAKE_BUILD_TYPE=Debug CMAKE_GENERATOR=Ninja  ~/rstudio-pro/vagrant/iterate-pro.sh \
+MAKEFLAGS=-j5 CMAKE_BUILD_TYPE=Debug CMAKE_GENERATOR=Ninja  ~/rstudio-pro/vagrant/iterate-pro.sh \
     --www-local-path="/home/gary/rstudio-pro/src/gwt/www"
 
 #~/rstudio-pro/vagrant/iterate-pro.sh
