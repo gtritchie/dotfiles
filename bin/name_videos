@@ -1,1 +1,3 @@
+#!/usr/bin/env bash
+
 exiftool -d %Y-%m-%d-%H%M%S%%-c.%%e "-filename<CreateDate" videos

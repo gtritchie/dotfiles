@@ -3,7 +3,7 @@
 set -e
 
 
-PLATFORM=`uname`
+PLATFORM=$(uname)
 if [ "${PLATFORM}" != "Darwin" ]; then
   echo "Only for Mac"
   exit 1

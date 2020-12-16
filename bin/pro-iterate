@@ -4,11 +4,15 @@ set -e
 
 PREV_WD=$(pwd)
 
-cd ~/rstudio-pro/package/linux
+if [ -z "$RSTUDIO_PRO_BASE" ]; then
+    RSTUDIO_PRO_BASE=~/rstudio-pro
+fi
+echo "Using ${RSTUDIO_PRO_BASE}"
+cd "${RSTUDIO_PRO_BASE}/package/linux"
 
-MAKEFLAGS=-j5 CMAKE_BUILD_TYPE=Debug CMAKE_GENERATOR=Ninja  ~/rstudio-pro/vagrant/iterate-pro.sh \
-    --www-local-path="/home/gary/rstudio-pro/src/gwt/www"
+MAKEFLAGS=-j5 CMAKE_BUILD_TYPE=Debug CMAKE_GENERATOR=Ninja ${RSTUDIO_PRO_BASE}/vagrant/iterate-pro.sh \
+    --www-local-path="${RSTUDIO_PRO_BASE}/src/gwt/www"
 
-#~/rstudio-pro/vagrant/iterate-pro.sh
+#${RSTUDIO_PRO_BASE}/vagrant/iterate-pro.sh
 
-cd $PREV_WD
+cd "$PREV_WD"

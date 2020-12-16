@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-cd ~/rstudio/src/cpp/cmake-build-debug
-./rserver-dev
-
-

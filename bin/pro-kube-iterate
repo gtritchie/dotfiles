@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-set -e
-
-PREV_WD=$(pwd)
-cd ~/rstudio-pro/src/cpp/job_launcher/impls/kubernetes/docker
-./build-local-session-image.sh
-sudo rm ~/rstudio-pro/docker/package/*.rpm
-cd $PREV_WD

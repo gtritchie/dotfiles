@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-sudo vim /etc/rstudio/rsession.conf

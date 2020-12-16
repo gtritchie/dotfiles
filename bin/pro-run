@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+set -e
+
+if [ -z "$RSTUDIO_PRO_BASE" ]; then
+    RSTUDIO_PRO_BASE=~/rstudio-pro
+fi
+echo "Using ${RSTUDIO_PRO_BASE}"
+
 sudo rstudio-server stop
-sudo /usr/lib/rstudio-server/bin/rserver --server-daemonize=0 --www-local-path="/home/gary/rstudio-pro/src/gwt/www" --www-use-emulated-stack=1
+sudo /usr/lib/rstudio-server/bin/rserver --server-daemonize=0 --www-local-path="$RSTUDIO_PRO_BASE/src/gwt/www" --www-use-emulated-stack=1
 

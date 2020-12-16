@@ -6,7 +6,7 @@ echo "About to delete all per-user RStudio state and settings, proceed with caut
 echo "(Does not delete Project-specific state in .Rproj.user or global machine state)"
 read -p "Press [enter] to continue or Ctrl+C"
 
-PLATFORM=`uname`
+PLATFORM=$(uname)
 
 # r state
 rm -f ~/.RData

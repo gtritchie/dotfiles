@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-cd ~/rstudio/src/gwt
-ant devmode
-
