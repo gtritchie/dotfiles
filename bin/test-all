@@ -6,16 +6,20 @@
 set -e
 
 PREV_WD=$(pwd)
-cd ~/rstudio-ide-automation/rstudio_server_pro/
+cd ~/rstudio-ide-automation/
 
 # NOTE destructive configuration (on purpose) to get to clean startup state
 echo "Cleaning up RStudio Server state (may need sudo password)"
-echo "auth-sign-in-throttle-seconds=0" | sudo tee /etc/rstudio/rserver.f > /dev/null
+echo "auth-sign-in-throttle-seconds=0" | sudo tee /etc/rstudio/rserver.conf > /dev/null
 echo '{"terminal_renderer": "dom", "save_workspace": "never"}' | sudo tee /etc/rstudio/rstudio-prefs.json > /dev/null
 rm -f ~/"~.Rproj"
 rm -rf ~/.rstudio
-rm -rf ~/.config
+rm -rf ~/.config/rstudio
+rm -rf ~/.local/share/rstudio
+rm -f ~/.RData
+rm -f ~/.Rhistory
 
-ENV='local' ../scripts/run-tests.sh -m "not devexclude and not rsp"
+# ENV='local' ./scripts/run-tests.sh -m "not devexclude and not rsp"
+ENV='local' ./scripts/run-tests.sh -m accessibility
 
 cd $PREV_WD

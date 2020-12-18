@@ -3,7 +3,11 @@ set -e
 
 PREV_WD=$(pwd)
 
-cd ~/rstudio-pro/src/gwt
+if [ -z "$RSTUDIO_PRO_BASE" ]; then
+    RSTUDIO_PRO_BASE=~/rstudio-pro
+fi
+echo "Using ${RSTUDIO_PRO_BASE}/src/gwt"
+cd "${RSTUDIO_PRO_BASE}/src/gwt"
 ant devmode -Dbind.address=0.0.0.0
-cd $PREV_WD
+cd "$PREV_WD"
 

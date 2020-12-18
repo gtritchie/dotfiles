@@ -2,19 +2,41 @@
 
 set -e
 
-# things gitignored but I'm not deleting
-#rm ~/rstudio/src/gwt/www/js/acesupport.js
-#rm ~/rstudio/src/gwt/www/js/ace.js
-#rm ~/rstudio/src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ace/acesupport.js
-#rm ~/rstudio/src/gwt/src/org/rstudio/core/client/jsonrpc/json2.min.js
-#rm ~/rstudio/src/gwt/www/js/json2.min.js
-#rm ~/rstudio/src/gwt/.ant-targets-build.xml
+PREV_WD=$(pwd)
 
-rm -rf ~/rstudio/src/gwt/bin
-rm -rf ~/rstudio/src/gwt/bin.test
-rm -rf ~/rstudio/src/gwt/gwt-unitCache
-rm -rf ~/rstudio/src/gwt/extras
-rm -rf ~/rstudio/src/gwt/gen
-rm -rf ~/rstudio/src/gwt/sdk
-rm -rf ~/rstudio/src/gwt/war
-rm -rf ~/rstudio/src/gwt/www/rstudio
+if [ -z "$RSTUDIO_BASE" ]; then
+  RSTUDIO_BASE=~/rstudio
+fi
+
+echo "Using ${RSTUDIO_BASE}/src/gwt"
+cd "${RSTUDIO_BASE}/src/gwt"
+
+# things gitignored but I'm not deleting
+#rm ./www/js/acesupport.js
+#rm ./www/js/ace.js
+#rm ./src/org/rstudio/studio/client/workbench/views/source/editors/text/ace/acesupport.js
+#rm ./src/org/rstudio/core/client/jsonrpc/json2.min.js
+#rm ./www/js/json2.min.js
+#rm ./.ant-targets-build.xml
+
+ant clean
+rm -rf ./bin
+rm -rf ./bin.test
+rm -rf ./gwt-unitCache
+rm -rf ./extras
+rm -rf ./gen
+rm -rf ./sdk
+rm -rf ./war
+rm -rf ./www/rstudio
+
+PLATFORM=$(uname)
+if [ "${PLATFORM}" = "Darwin" ]; then
+  cd "$TMPDIR"
+else
+  cd /tmp
+fi
+rm -rf gwtc*
+rm -rf gwt-c*
+
+cd "${PREV_WD}"
+

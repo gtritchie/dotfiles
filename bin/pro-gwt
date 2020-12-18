@@ -1,6 +1,15 @@
 #!/usr/bin/env bash
 
+set -e
+
+if [ -z "$RSTUDIO_PRO_BASE" ]; then
+    RSTUDIO_PRO_BASE=~/rstudio-pro
+fi
+
+echo "About to copy gwt build from ${RSTUDIO_PRO_BASE}/src/gwt/www to /usr/lib/rstudio-server/www"
+read -p "Press [enter] to continue or Ctrl+C"
+
 sudo rm -rf /usr/lib/rstudio-server/www
 sudo rm -rf /usr/lib/rstudio-server/www-symbolmaps
-sudo cp -R ~/rstudio-pro/src/gwt/www /usr/lib/rstudio-server
+sudo cp -R ${RSTUDIO_PRO_BASE}/src/gwt/www /usr/lib/rstudio-server
 
