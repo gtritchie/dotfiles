@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+transmission-daemon --foreground -c ~/Downloads/torrent -w ~/Downloads/torrent
+
