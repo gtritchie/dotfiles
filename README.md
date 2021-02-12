@@ -21,10 +21,6 @@ Mac-only
 
 * ln ~/dotfiles/bash/bash_profile_mac ~/.bash_profile
 
-* ~~brew install hg~~
-* ~~hg clone https://bitbucket.org/lukeworth/lldb-qt-formatters~~
-* ~~ln ~/dotfiles/lldb/.lldbinit .lldbinit~~
-
 Linux-only
 ----------
 
