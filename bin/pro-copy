@@ -10,19 +10,19 @@ fi
 
 COPY_SOURCE=${RSTUDIO_PRO_BASE}/build/src/cpp
 COPY_DEST=/usr/lib/rstudio-server
-echo "Copying from  ${COPY_SOURCE} to ${COPY_DEST}"
 
 cd ${COPY_SOURCE}
 
+echo "Stopping server, launcher, rsession, workspace..."
 sudo rstudio-server stop
 sudo rstudio-launcher stop
-
-pkill rserver 
-pkill rsession
-pkill rworkspaces
-pkill rstudio-launcher
+pkill rserver || true
+pkill rsession || true
+pkill rworkspaces || true
+pkill rstudio-launcher || true
 
 # copy compiled stuff into RSP installation
+echo "Copying from  ${COPY_SOURCE} to ${COPY_DEST}"
 
 sudo cp -v $COPY_SOURCE/server/rserver $COPY_DEST/bin/rserver
 sudo cp -v $COPY_SOURCE/session/rsession $COPY_DEST/bin/rsession
@@ -38,6 +38,4 @@ sudo cp -v $COPY_SOURCE/job_launcher/impls/kubernetes/rstudio-kubernetes-launche
 sudo cp -v $COPY_SOURCE/job_launcher/impls/slurm/rstudio-slurm-launcher $COPY_DEST/bin/rstudio-slurm-launcher
 
 cd "$PREV_WD"
-
-echo Done
 
