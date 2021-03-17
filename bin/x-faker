@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -e
+
+echo Starting Xvfb, use following to connect:
+echo export DISPLAY=":500.0"
+echo pkill Xvfb to stop
+
+Xvfb :500 -screen 0 1280x1024x24 &
+
