@@ -8,9 +8,9 @@ if [ -z "$RSTUDIO_PRO_BASE" ]; then
     RSTUDIO_PRO_BASE=~/rstudio-pro
 fi
 
-COPY_SOURCE=${RSTUDIO_PRO_BASE}/src/cpp/cmake-build-debug
+COPY_SOURCE=${RSTUDIO_PRO_BASE}/build/src/cpp
 COPY_DEST=/usr/lib/rstudio-server
-echo "Using ${COPY_SOURCE}"
+echo "Copying from  ${COPY_SOURCE} to ${COPY_DEST}"
 
 cd ${COPY_SOURCE}
 
