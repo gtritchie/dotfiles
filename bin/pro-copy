@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -e
-
 PREV_WD=$(pwd)
 
 if [ -z "$RSTUDIO_PRO_BASE" ]; then

@@ -10,7 +10,7 @@ fi
 echo "Using ${RSTUDIO_PRO_BASE}"
 cd "${RSTUDIO_PRO_BASE}/package/linux"
 
-MAKEFLAGS=-j5 CMAKE_BUILD_TYPE=Debug CMAKE_GENERATOR=Ninja ${RSTUDIO_PRO_BASE}/vagrant/iterate-pro.sh \
+MAKEFLAGS=-j5 CMAKE_BUILD_TYPE=Debug CMAKE_GENERATOR=Ninja NO_REBUILD=1 ${RSTUDIO_PRO_BASE}/vagrant/iterate-pro.sh \
     --www-local-path="${RSTUDIO_PRO_BASE}/src/gwt/www"
 
 #${RSTUDIO_PRO_BASE}/vagrant/iterate-pro.sh

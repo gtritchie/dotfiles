@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -e
-
 if [ -z "$RSTUDIO_PRO_BASE" ]; then
     RSTUDIO_PRO_BASE=~/rstudio-pro
 fi
