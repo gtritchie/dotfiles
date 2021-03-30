@@ -29,7 +29,7 @@ sudo cp -v $COPY_SOURCE/session/workspaces/rworkspaces $COPY_DEST/bin/rworkspace
 sudo cp -v $COPY_SOURCE/session/modules/R/JobLauncher.R $COPY_DEST/R/modules
 sudo cp -v $COPY_SOURCE/session/modules/R/SessionOverlay.R $COPY_DEST/R/modules
 sudo cp -v $COPY_SOURCE/session/modules/R/SessionJobs.R $COPY_DEST/R/modules
-sudo cp -v $COPY_SOURCE/server/extras/admin/rstudio-server $COPY_DEST/bin/rstudio-server
+#sudo cp -v $COPY_SOURCE/server/extras/admin/rstudio-server $COPY_DEST/bin/rstudio-server
 
 # launcher
 sudo cp -v $COPY_SOURCE/job_launcher/rstudio-launcher $COPY_DEST/bin/rstudio-launcher
