@@ -2,7 +2,47 @@
 
 set -e
 
+function help() {
+    cat <<EOF
+usage: pro-iterate [options]
+
+Build and install RSP package from local sources. Assumes location to be ~/rstudio-pro; set
+environment variable RSTUDIO_PRO_BASE if located elsewhere.
+
+Examples
+  ./pro-iterate
+  ./pro-iterate --full
+
+Options
+  -f, --full
+
+        Full build including GWT.
+  -i, --incremental (default)
+        Incremental build, does not build GWT. Can only be used after a full build.
+
+EOF
+}
+
 PREV_WD=$(pwd)
+INCREMENTAL=1
+
+while [ $# -gt 0 ]; do
+    case "$1" in
+        --full|-f)
+            INCREMENTAL=
+            ;;
+        --incremental|-i)
+            INCREMENTAL=1
+            ;;
+        --help|-h)
+            help
+            exit 0
+            ;;
+        *)
+            ;;
+    esac                                                                                            
+    shift                                                                                           
+done
 
 if [ -z "$RSTUDIO_PRO_BASE" ]; then
     RSTUDIO_PRO_BASE=~/rstudio-pro
@@ -10,7 +50,14 @@ fi
 echo "Using ${RSTUDIO_PRO_BASE}"
 cd "${RSTUDIO_PRO_BASE}/package/linux"
 
-MAKEFLAGS=-j6 CMAKE_BUILD_TYPE=Debug CMAKE_GENERATOR=Ninja NO_REBUILD=1 ${RSTUDIO_PRO_BASE}/vagrant/iterate-pro.sh \
+if test -z "$INCREMENTAL"
+then
+    echo "Performing full rebuild"
+else
+    echo "Performing incremental rebuild (without GWT)"
+fi
+
+MAKEFLAGS=-j6 CMAKE_BUILD_TYPE=Debug CMAKE_GENERATOR=Ninja NO_REBUILD=${INCREMENTAL} ${RSTUDIO_PRO_BASE}/vagrant/iterate-pro.sh \
     --www-local-path="${RSTUDIO_PRO_BASE}/src/gwt/www"
 
 #${RSTUDIO_PRO_BASE}/vagrant/iterate-pro.sh
