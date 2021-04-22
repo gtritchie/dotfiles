@@ -35,6 +35,7 @@ git config --global core.excludesfile ~/.gitignore_global
 git config --global user.name "Gary Ritchie"
 git config --global user.email "gary@rstudio.com" 
 git config --global core.editor "vim"
+git config --global core.pager cat
 
 if is-macos; then
   section "macOS-only config"
