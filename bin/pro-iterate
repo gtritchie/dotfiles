@@ -15,8 +15,8 @@ Examples
 
 Options
   -f, --full
-
         Full build including GWT.
+
   -i, --incremental (default)
         Incremental build, does not build GWT. Can only be used after a full build.
 
