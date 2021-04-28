@@ -2,9 +2,9 @@ set nocompatible	" be iMproved, required
 
 
 " RStudio build commands
-au FileType cpp setlocal makeprg=make\ \-j4\ -C\ ~/rstudio-build
-nmap <Leader>a :Dispatch ant draft -f ~/rstudio/src/gwt/build.xml<CR>
-nmap <Leader>m :Make<CR>
+" au FileType cpp setlocal makeprg=make\ \-j4\ -C\ ~/rstudio-build
+" nmap <Leader>a :Dispatch ant draft -f ~/rstudio/src/gwt/build.xml<CR>
+" nmap <Leader>m :Make<CR>
 
 " RStudio default code formatting settings for tabs, spaces, and code width
 set ts=4
@@ -43,19 +43,19 @@ map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 
 " Navigate source code more semantically with plugins
-map <Leader>d :YcmCompleter GoToImprecise<CR>
-map <Leader>f :Ag -U --ignore tags --ignore *.a --ignore *.min.* --ignore *.cache.js <cword><CR>
-map <Leader>1 :JavaCorrect<CR>
-map <Leader>j :JavaSearchContext<CR>
+" map <Leader>d :YcmCompleter GoToImprecise<CR>
+" map <Leader>f :Ag -U --ignore tags --ignore *.a --ignore *.min.* --ignore *.cache.js <cword><CR>
+" map <Leader>1 :JavaCorrect<CR>
+" map <Leader>j :JavaSearchContext<CR>
 
 " Airline settings
-let g:airline#extensions#whitespace#enabled = 0
+" let g:airline#extensions#whitespace#enabled = 0
 
 " use embedded YCM config
-let g:ycm_global_ycm_extra_conf = '/rstudio/vagrant/ycm_extra_conf.py'
+" let g:ycm_global_ycm_extra_conf = '/rstudio/vagrant/ycm_extra_conf.py'
 
 " tell eclim to use YCM
-let g:EclimCompletionMethod = 'omnifunc'
+" let g:EclimCompletionMethod = 'omnifunc'
 
 " Gary's settings
 syntax on
