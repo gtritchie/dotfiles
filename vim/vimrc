@@ -1,10 +1,4 @@
-set nocompatible	" be iMproved, required
-
-
-" RStudio build commands
-" au FileType cpp setlocal makeprg=make\ \-j4\ -C\ ~/rstudio-build
-" nmap <Leader>a :Dispatch ant draft -f ~/rstudio/src/gwt/build.xml<CR>
-" nmap <Leader>m :Make<CR>
+set nocompatible
 
 " RStudio default code formatting settings for tabs, spaces, and code width
 set ts=4
@@ -36,34 +30,10 @@ set cursorline
 set bs=2
 set showcmd
 set nowrapscan
-syn on
-
-" Window management
-map <C-J> <C-W>j<C-W>_
-map <C-K> <C-W>k<C-W>_
-
-" Navigate source code more semantically with plugins
-" map <Leader>d :YcmCompleter GoToImprecise<CR>
-" map <Leader>f :Ag -U --ignore tags --ignore *.a --ignore *.min.* --ignore *.cache.js <cword><CR>
-" map <Leader>1 :JavaCorrect<CR>
-" map <Leader>j :JavaSearchContext<CR>
-
-" Airline settings
-" let g:airline#extensions#whitespace#enabled = 0
-
-" use embedded YCM config
-" let g:ycm_global_ycm_extra_conf = '/rstudio/vagrant/ycm_extra_conf.py'
-
-" tell eclim to use YCM
-" let g:EclimCompletionMethod = 'omnifunc'
+syntax on
 
 " Gary's settings
-syntax on
 inoremap jk <ESC>
-" set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]
 set encoding=utf-8
 let g:netrw_browse_split = 3
-" autocmd BufEnter * silent! lcd %:p:h
-
-imap jk <Esc>
 
