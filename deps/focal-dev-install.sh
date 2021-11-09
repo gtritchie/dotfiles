@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+
+set -e
+
+sudo apt install -y \
+    ant \
+    build-essential \
+    clang \
+    cmake \
+    curl \
+    debsigs \
+    dpkg-sig \
+    expect \
+    fakeroot \
+    gdebi-core \
+    git \
+    gnupg1 \
+    iproute2 \
+    libacl1-dev \
+    libattr1-dev \
+    libbz2-dev \
+    libcap-dev \
+    libclang-6.0-dev \
+    libclang-dev \
+    libcurl4-openssl-dev \
+    libegl1-mesa \
+    libfuse2 \
+    libgl1-mesa-dev \
+    libgtk-3-0 \
+    libnss3 \
+    libpam-dev \
+    libpango1.0-dev \
+    libpq-dev \
+    libsqlite3-dev \
+    libssl-dev \
+    libuser1-dev \
+    libxml2-dev \
+    libxslt1-dev \
+    locales \
+    lsof \
+    ninja-build \
+    p7zip-full \
+    patchelf \
+    pkg-config \
+    python \
+    rrdtool \
+    software-properties-common \
+    sqlite3 \
+    sudo \
+    tigervnc-viewer \
+    tmux \
+    unzip \
+    uuid \
+    uuid-dev \
+    valgrind \
+    vim \
+    wget \
+    xclip \
+    xvfb \
+    zlib1g-dev \
+    zsh
+
