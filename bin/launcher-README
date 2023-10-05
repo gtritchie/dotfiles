@@ -1,0 +1,4 @@
+[cluster]
+name=Testing
+type=Testing
+exe=/home/gary/bin/launcher-arm
