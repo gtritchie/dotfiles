@@ -1,3 +1,7 @@
+Got this from aaronj
+
+launcher.conf:
+
 [cluster]
 name=Testing
 type=Testing
