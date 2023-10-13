@@ -1,6 +1,6 @@
 alias cls='clear && tmux clear-history'
 #alias jdk8='export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home'
 #alias jdk11='export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home'
-alias jdk8='export JAVA_HOME=/opt/zulu8.68.0.19-ca-jdk8.0.362-macosx_aarch64'
+alias jdk8='export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk'
 alias jdk11='export JAVA_HOME=/opt/homebrew/opt/openjdk@11'
 alias jdk17='export JAVA_HOME=/opt/homebrew/opt/openjdk@17'
