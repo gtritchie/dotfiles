@@ -33,7 +33,7 @@ fi
 
 git config --global core.excludesfile ~/.gitignore_global
 git config --global user.name "Gary Ritchie"
-git config --global user.email "gary@rstudio.com" 
+git config --global user.email "gary@posit.co" 
 git config --global core.editor "vim"
 git config --global init.defaultBranch main
 # git config --global core.pager cat
