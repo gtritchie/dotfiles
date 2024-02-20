@@ -57,9 +57,9 @@ else
     echo "Performing incremental rebuild (without GWT)"
 fi
 
-MAKEFLAGS=-j6 CMAKE_BUILD_TYPE=Debug CMAKE_GENERATOR=Ninja NO_REBUILD=${INCREMENTAL} ${RSTUDIO_PRO_BASE}/vagrant/iterate-pro.sh \
+CMAKE_BUILD_TYPE=Debug CMAKE_GENERATOR=Ninja NO_REBUILD=${INCREMENTAL} "${RSTUDIO_PRO_BASE}"/scripts/iterate-pro.sh \
     --www-local-path="${RSTUDIO_PRO_BASE}/src/gwt/www"
 
-#${RSTUDIO_PRO_BASE}/vagrant/iterate-pro.sh
+# CMAKE_BUILD_TYPE=Debug CMAKE_GENERATOR=Ninja NO_REBUILD=${INCREMENTAL} "${RSTUDIO_PRO_BASE}"/scripts/iterate-pro.sh
 
 cd "$PREV_WD"
