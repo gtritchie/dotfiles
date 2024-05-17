@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    echo "Error: You must source this script, not execute it."
+		exit 1
+fi
+
 export PYTHONPATH=~/rstudio-ide-automation/rstudio_server_pro
 export CHROMEDRIVER_PATH=~/bin/chromedriver
 
