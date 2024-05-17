@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-
+pushd ~/rstudio-ide-automation
 make desktop-test PYTESTOPTS="-m 'desktop and wip'"
+popd
 
