@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+export PYTHONPATH=~/rstudio-ide-automation/rstudio_server_pro
+export CHROMEDRIVER_PATH=~/bin/chromedriver
+export ELECTRON_PATH=/usr/bin/rstudio
+export RS_NO_SPLASH=1
