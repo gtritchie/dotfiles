@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+make desktop-test PYTESTOPTS="-m 'desktop and wip'"
+
