@@ -3,8 +3,8 @@
 export PYTHONPATH=~/rstudio-ide-automation/rstudio_server_pro
 export CHROMEDRIVER_PATH=~/bin/chromedriver
 
-#export ELECTRON_PATH=/Applications/RStudio.app/Contents/MacOS/RStudio
-export ELECTRON_PATH=/opt/releases/interim/RStudio-2024.07.0-143.app/Contents/MacOS/RStudio
+export ELECTRON_PATH=/Applications/RStudio.app/Contents/MacOS/RStudio
+#export ELECTRON_PATH=/opt/releases/interim/RStudio-2024.07.0-143.app/Contents/MacOS/RStudio
 #export ELECTRON_PATH=/Applications/RStudio-Devel.app/Contents/MacOS/RStudio
 
 export RS_NO_SPLASH=1
